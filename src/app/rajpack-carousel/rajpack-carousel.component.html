@@ -1,0 +1,29 @@
+<div id="home" class="image-container">
+    <div id="img-prev" (click) = "imgPrevHandler()">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+            style="enable-background:new 0 0 512 512;fill:rgb(66, 152, 250);" xml:space="preserve">
+            <g id="icons">
+                <path id="arrow_left" d="M113.6,203.9c-32.1,24-32,83.6,0.2,107.5l117.5,87.1l117.5,87.1c32.2,23.8,72.4-5.8,72.6-53.5l0.5-176.2
+                    l0.5-175.2c0.2-47.8-40.2-77.7-72.4-53.6l-117.9,88.2L113.6,203.9z" />
+            </g>
+        </svg>
+    </div>
+    <div class="image-carousel">
+        <div data-id="quote-1" class="hover-text">
+            <i>Customer Satisfaction is worthless...<br>
+                Customer Loyalty is Priceless...</i>
+        </div>
+        <img #carousels *ngFor="let img of imgSrcs; let i = index" src="{{img}}" [attr.data-active]="imgActive === (i + 1) ? true : false" [ngClass]="{'invisible' : imgActive !== (i + 1)}"/>
+    </div>
+    <div id="img-next" (click)="imgNextHandler()">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+            style="enable-background:new 0 0 512 512;fill:rgb(66, 152, 250);" xml:space="preserve">
+            <g id="icons">
+                <path id="arrow_right" d="M279.8,115.3L161.9,27.1C129.8,3,89.4,32.9,89.6,80.7l0.5,175.2l0.5,176.2c0.1,47.7,40.4,77.4,72.6,53.5
+                l117.5-87.1l117.5-87.1c32.2-23.9,32.3-83.4,0.2-107.5L279.8,115.3z" />
+            </g>
+        </svg>
+    </div>
+</div>

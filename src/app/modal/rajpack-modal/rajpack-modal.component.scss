@@ -1,0 +1,41 @@
+.float-container {
+    position: fixed;
+    display: flex;
+    overflow: scroll;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -3;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    &.open-state {
+        z-index: 6;
+        opacity: 1;
+        .modal {
+            width: 60vw;
+            height: 500px;
+            overflow: scroll;
+        }
+    }
+    .modal {
+        width: 0;
+        height: 0;
+        margin: auto;
+        font-size: 20px;
+        position: relative;
+        font-weight: 600;
+        border-radius: 10px;
+        background: white;
+        font-family: 'Quicksand', sans-serif;
+        padding: 20px;
+        line-height: 2rem;
+        align-items: center;
+        -webkit-transition: width 1s, height 1s;
+        -moz-transition: width 1s, height 1s;
+        -ms-transition: width 1s, height 1s;
+        transition: width 1s, height 1s;
+    }
+}

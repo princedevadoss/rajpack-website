@@ -1,0 +1,10 @@
+<div class="nav-tab">
+    <div class="logo-container">
+        <img class="logo" src="../../assets/finallogo.png" />
+    </div>
+    <div class="fa fa-bars menu" (click)="changeMenuState()"></div>
+    <a *ngFor="let link of links" href="{{link.hash}}" (click)="linkHandler()">{{link.name}}</a>
+</div>
+<div class="alt-nav-tab" [ngClass]="{'hide' : !openMenu}">
+    <a *ngFor="let link of links.reverse()" href="{{link.hash}}" (click)="linkHandler()">{{link.name}}</a>
+</div>

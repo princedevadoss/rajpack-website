@@ -1,0 +1,23 @@
+<div id="machineries" class="rajpack-content">
+    <div class="content-header">Machineries</div>
+    <div class="content-body">
+        <p>
+            <span class="content-starter">Why Us?</span> We have world class and well equipped Machineries to manufacture qualified products.
+            We have all types of machineries ranging from making corrugation roll from paper reels to box stitching and printing. We dont depend
+            on third party vendor at any cost. We purchase good quality paper reels from trusted vendors.
+        </p>
+        <p>
+            Here we are showcasing some of our machineries at our factory...
+        </p>
+        <div #grid class="machinery-grid">
+            <div *ngFor="let machinery of machineries" style="position: relative;">
+                <img [ngClass]="hideGrid ? machinery.rotateType : 'img-type-left'" src="{{machinery.url}}"/>
+                <div (click)="openImageModal(machinery.url, machinery.header)" 
+                      class="machinery-text {{machinery.type}}"
+                      [ngClass]="hideGrid ? machinery.rotateType : ''">
+                    Click to Preview
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div id="about" class="rajpack-content">
+        <div class="content-body">
+            <p>
+                <span class="content-starter">Rajpack</span> is a India, Chennai based company engaged in design,
+                printing, manufacturing & distributing wide range of packaging materials such as corrugated boxes,
+                cardboard boxes etc.. We provide package design solutions to a wide array of industry and end user applications.
+            </p>
+            <p>
+                Our packaging and shipping supplies are manufactured with high-quality materials that can protect your contents in a safe way.
+                Our corrugation and packaging includes wide variety of sizes, color, GSM and printed materials. We also support wide varieties like
+                1 Ply, 3 Ply, 5 Ply, 7Ply and 9 Ply Boxes. We provides high quality corrugated boxes with affordable prize compared to market rate.
+            </p>
+        </div>
+        <div class="content-body">
+            <p>
+                <span class="content-starter">Our Journey So Far</span> We started at the year <b>2001</b> with rented space with around 5 skilled and unskilled staffs.
+                We had a annual turnover of around 10 lakhs per annum. Now we are in our own space of around <b>10000.sq.ft</b> with two floors and having around 15+ skilled and unskilled labours.
+                We are currently making a turnover of around 50 lakhs per annum. 
+            </p>
+        </div>
+        <div class="content-header">Leadership</div>
+        <div #owner class="card type1" [ngClass]="{'img-type-left': ownerReached}" style="margin: auto;">
+            <img src="../../assets/owner.jpg"/>
+            <div>Director</div>
+        </div>
+        <div class="content-body">
+            <p><span class="content-highlight">Mr. V.K.Devadoss</span> is the Director of the Company since inception. He is a Fellow Member of the SICBMA 
+                <span class="content-highlight">(SOUTH INDIA CORRUGATED BOX MANUFACTURERS ASSOCIATION).</span> The Company has witnessed landmark transformation under his leadership.
+                His dynamic personality is the reason the Company has reached new heights and endeavours.
+            </p>
+        </div>
+        <div class="content-header">Badges</div>
+        <div #cardPack class="card-pack">
+            <div *ngFor="let card of cards" class="short-card" [ngClass]="{'img-type-left': shortCardReached}" (click)="triggerOpenState(card.opt)">
+                    <img src="{{card.src}}"/>
+                    <div class="place-text">{{card.name}}</div>
+                    <div class="blacken-board"></div>
+            </div>
+        </div>
+    </div>

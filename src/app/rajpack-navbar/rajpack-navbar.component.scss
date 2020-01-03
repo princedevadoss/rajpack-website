@@ -1,0 +1,119 @@
+.nav-tab {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    min-width: 700px;
+    z-index: 4;
+    background: rgb(66, 152, 250);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.301);
+    a {
+        float: right;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px;
+        margin: 10px;
+        display: block;
+        text-decoration: none;
+        -webkit-transition: background 0.5s, color 1s;
+        transition: background 0.5s, color 1s;
+        &:hover {
+            background: white;
+            border-radius: 10px;
+            color: rgb(66, 152, 250);
+        }
+        &:focus {
+            background: rgba(224, 223, 223, 0.479);
+            border-radius: 10px;
+        }
+    }
+    .menu {
+        right: 0;
+        color: white;
+        font-size: 32px;
+        position: fixed;
+        padding: 5px 15px;
+        margin: 5px;
+        cursor: pointer;
+        display: none;
+    }
+    .logo-container {
+        float: left;
+        height: 62px;
+        width: 80px;
+        background: white;
+        .logo {
+            position: absolute;
+            left: -6px;
+            top: -3px;
+            height: 60px;
+            width: 90px;
+        }
+    }
+}
+
+.alt-nav-tab {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    margin-top: 206px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    z-index: 4;
+    background: rgb(66, 152, 250);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.301);
+    a {
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 20px 15px;
+        font-size: 22px;
+        background: white;
+        text-align: center;
+        border: 1px solid rgb(66, 152, 250);
+        z-index: 3;
+        display: block;
+        text-decoration: none;
+        -webkit-transition: background 0.5s, color 1s;
+        transition: background 0.5s, color 1s;
+        &:hover {
+            background: rgb(66, 152, 250);
+            color: white;
+        }
+    }
+}
+
+@media handheld and (max-width: 600px), screen and (max-device-width: 600px), screen and (max-width: 600px) {
+    .nav-tab {
+        .menu {
+            display: block;
+        }
+        a {
+            display: none;
+        }
+    }
+}
+
+@media handheld and (max-width: 400px), screen and (max-device-width: 400px), screen and (max-width: 400px) { 
+    .alt-nav-tab {
+        margin-top: 273px;
+        a {
+            padding: 30px 15px;
+            font-size: 28px;
+        }
+    }
+}
+
+@media handheld and (max-width: 400px), screen and (max-device-width: 400px), screen and (max-width: 400px) { 
+    .nav-tab > .menu {
+        font-size: 20px;
+        right: 20px;
+        margin-top: 0;
+    }
+}
+
+.hide {
+    display: none;
+}

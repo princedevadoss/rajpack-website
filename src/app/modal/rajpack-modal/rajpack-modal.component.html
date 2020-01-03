@@ -1,0 +1,7 @@
+<div class="float-container" [ngClass]="{'open-state': openModal}">
+    <div class="modal" [ngStyle]="setMaxHeight">
+        <div class="close" (click)="openModal=false;openImage=false;openContent=false;setMaxHeight=0;"><div class="fa fa-times-circle-o close-inline"></div></div>
+        <app-content-modal [contents]="contents" *ngIf="openContent"></app-content-modal>
+        <app-image-modal [imageHeader]="image.header" [imageUrl]="image.url" *ngIf="openImage"></app-image-modal>
+    </div>
+</div>

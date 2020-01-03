@@ -1,0 +1,8 @@
+
+<div class="content-modal">    
+    <div *ngFor="let content of contents" class="content-modal-line">
+        <div *ngIf="content.left" [innerHTML] = "content.html"></div>
+        <div [class]="content.class" [ngStyle]="content.customStyle"></div>
+        <div *ngIf="!content.left" [innerHTML] = "content.html"></div>
+    </div>
+</div>
