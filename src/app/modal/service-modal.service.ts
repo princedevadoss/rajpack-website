@@ -7,6 +7,7 @@ import { Subject, Observable } from 'rxjs';
 export class ServiceModalService {
   private contentModal = new Subject<any>();
   private imageModal = new Subject<any>();
+  private formModal = new Subject<any>();
 
   sendImageModal(message: any) {
     this.imageModal.next({ text: message });
@@ -23,4 +24,12 @@ export class ServiceModalService {
  getContentModal(): Observable<any> {
     return this.contentModal.asObservable();
  }
+
+ sendFormModal(message: any) {
+  this.formModal.next({ text: message });
+}
+
+getFormModal(): Observable<any> {
+  return this.formModal.asObservable();
+}
 }

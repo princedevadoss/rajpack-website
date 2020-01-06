@@ -1,1 +1,11 @@
-<p>form-modal works!</p>
+<form id="modal-form">
+    <div class="form-header"><h2><b>{{form.header}}</b></h2></div>
+    <div class="form-body">
+        <ng-container *ngFor="let obj of form.data">
+            <div class="rajpack-label">{{obj.label}}</div>
+            <input *ngIf="obj.input" type="text" [(ngModel)]="obj.value" [ngModelOptions]="{standalone: true}"/>
+            <textarea *ngIf="obj.textarea" rows="6" cols="50" [(ngModel)]="obj.value" [ngModelOptions]="{standalone: true}"></textarea>
+        </ng-container>
+        <input class="form-btn" type="button" value="Submit" (click) = "sendRequest(form.type)"/>
+    </div>
+</form>

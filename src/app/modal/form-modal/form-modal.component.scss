@@ -1,0 +1,62 @@
+#modal-form {
+    margin: 20px;
+    .form-header {
+        height: 80px;
+        text-align: center;
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        color: rgb(2, 58, 143);
+    }
+    .form-body {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px 10px;
+        padding: 10px;
+        margin: 0 10%;
+        min-width: 300px;
+        div {
+            font-size: 20px;
+            text-align: left;
+            font-weight: 600;
+            color: rgb(2, 58, 143);
+        }
+        input[type="text"] {
+            height: 40px;
+        }
+        input[type="text"], textarea {
+            background: rgba(155, 199, 250, 0.199);
+            border: 2px solid rgb(2, 58, 143);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+            outline: none;
+            font-size: 18px;
+            -webkit-transition: background 0.5s, border 1s;
+            -moz-transition: background 0.5s, border 1s;
+            -ms-transition: background 0.5s, border 1s;
+            transition: background 0.5s, border 1s;
+            &:focus {
+                border: 2px solid rgb(2, 192, 2);
+                background: rgba(14, 248, 151, 0.171);
+            }
+        }
+        .form-btn {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin: 20px 20%;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Quicksand', sans-serif;
+            background: none;
+            border-radius: 15px;
+            cursor: pointer;
+            border: 2px solid rgb(2, 58, 143);
+            background: rgb(66, 152, 250, 0.3);
+            color: rgb(2, 58, 143);
+            outline: none;
+            &:hover {
+                background: rgba(195, 223, 255, 0.801);
+            }
+        }
+    }
+}

@@ -3,11 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "ng build && node --inspect server/index.js",
+    "build": "ng build"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +18,10 @@
     "@angular/router": "~8.2.14",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.10"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",
