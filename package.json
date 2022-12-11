@@ -20,7 +20,7 @@
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongoose": "^5.4.10"
   },
   "devDependencies": {
